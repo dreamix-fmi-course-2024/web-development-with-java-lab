@@ -275,3 +275,4 @@ public class Book {
 }
 ```
 
+As a part of this task you should choose the correct collection for your Store implementation
