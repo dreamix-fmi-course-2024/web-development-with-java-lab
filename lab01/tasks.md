@@ -62,7 +62,7 @@ FlightLeg {
     private LocalDate date;
 }
 
-Map<String, Flightleg>
+Map<String, List<Flightleg>>
 
 # Streams
 
