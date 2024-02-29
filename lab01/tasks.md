@@ -86,7 +86,7 @@ User will have a list of orders. An order will be a combination of status (enum)
 
 Order of implementation: Item -> OrderList -> PaymentMethod -> Order -> User
 
-* Create a class named Item inside *entity* package which consists of description:String and price:BigDecimal.
+* Create a class named Item inside *entity* package which consists of name:String, description:String and price:BigDecimal.
 
 * Create OrderLine which holds information for product, enum for status, boolean specialOffer and count
 Implement setters/getters/constructor
@@ -116,6 +116,19 @@ public enum PaymentMethod {
     CASH_ON_DELIVERY
 }
 ```
+
+```
+package ....streams.entity;
+
+public class Item {
+    private String name;
+    private String description;
+
+    private BigDecimal price;
+}
+```
+
+
 
 Write all your business logic inside *service* package (bg.uni.fmi.lab02.streams.service)
 
@@ -261,16 +274,4 @@ public class Book {
   private LocalDate publishedYear;
 }
 ```
-As a part of this task you should choose the correct collection. 
 
-## Task 12
-Obtain a list of products belongs to category “Books” with price > 100
-
-## Task 13
-Obtain a list of order with products belong to category “Baby”
-
-## Task 14
- Obtain a list of product with category = “Toys” and then apply 10% discount
-
-## Task 15
-Obtain a list of products ordered by customer of tier 2 between 01-Feb-2021 and 01-Apr-2021
