@@ -71,13 +71,16 @@ Before starting your task create a package named *bg.uni.fmi.lab01.streams*
 # Task 11
 Imagine you need to design a simple shop with a bascket. The following structure is used
 
+High-level structure
 ```
 User {List<Order>}
-    Order {enum Status ; List<OrderLine> ; LocalDate ; enum PaymentMethod}
-        OrderLine { enum ; Item ;  }
+    Order {id, enum OrderStatus ; List<OrderLine> ; LocalDate orderDate ; enum PaymentMethod}
+        OrderLine { quantity ; Item ; specialOffer }
             Item { String }
         PaymentMethod
 ```
+
+![alt tag](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/tree/main/lab01/class-diagram.png)
 
 User will have a list of orders. An order will be a combination of status (enum), list of order items, date of order (LocalDate) and payment method (enum)
 
@@ -95,13 +98,6 @@ Implement setters/getters/constructor
 
 Write your enums in VO (value object) package;
 
-```
-package ....streams.vo;
-
-public enum OrderLineStatus {
-    IN_STOCK, OUT_OF_STOCK, WAITING_FOR_STOCK
-}
-```
 
 ```
 package ....streams.vo;
