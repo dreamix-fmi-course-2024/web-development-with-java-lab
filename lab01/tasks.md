@@ -90,7 +90,7 @@ Order of implementation: Item -> OrderList -> PaymentMethod -> Order -> User
 
 * Create a class named Item inside *entity* package which consists of name:String, description:String and price:BigDecimal.
 
-* Create OrderLine which holds information for product, enum for status, boolean specialOffer and count
+* Create OrderLine which holds information for product, boolean specialOffer and count
 Implement setters/getters/constructor
 
 * Create class Order that holds information for id, status:OrderStatus, creationDate, totalPrice, paymentMethod, deliveryDueDate, user.
