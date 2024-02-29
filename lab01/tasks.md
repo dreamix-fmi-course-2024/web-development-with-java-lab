@@ -68,6 +68,7 @@ Map<String, Flightleg>
 
 Before starting your task create a package named *bg.uni.fmi.lab01.streams*
 
+# Task 11
 Imagine you need to design a simple shop with a bascket. The following structure is used
 
 ```
@@ -266,14 +267,14 @@ public class Book {
 ```
 As a part of this task you should choose the correct collection. 
 
-## Task 9
+## Task 12
 Obtain a list of products belongs to category “Books” with price > 100
 
-## Task 10
+## Task 13
 Obtain a list of order with products belong to category “Baby”
 
-## Task 11
+## Task 14
  Obtain a list of product with category = “Toys” and then apply 10% discount
 
-## Task 12
+## Task 15
 Obtain a list of products ordered by customer of tier 2 between 01-Feb-2021 and 01-Apr-2021
