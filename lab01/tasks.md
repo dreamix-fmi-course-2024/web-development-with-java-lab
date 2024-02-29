@@ -51,10 +51,10 @@ Write a method to replace the second element of a ArrayList with the specified e
 Write a Java program to count the number of key-value (size) mappings in a map.
 
 ## Task 10
-Write the following structure against aircraft tail number (9H-VCA) associate a list of leg information (fromAirport["LBSF"], toAirport["EBBR"], date).
+Create a structure that will represent aircraft tail number (e.g 9H-VCA) against a list of leg information (fromAirport["LBSF"], toAirport["EBBR"], date).
 Fill test information
 Extract legs inside list/set that have from/to airport for a specific airport
-(Example: All flight legs for airport LBSF)
+(Example: All flight legs from airport LBSF)
 
 FlightLeg {
     private String fromAirport;
