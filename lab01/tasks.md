@@ -80,7 +80,7 @@ User {List<Order>}
         PaymentMethod
 ```
 
-![alt tag](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/tree/main/lab01/class-diagram.png)
+![alt tag](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/blob/main/lab01/class-diagram.png)
 
 User will have a list of orders. An order will be a combination of status (enum), list of order items, date of order (LocalDate) and payment method (enum)
 
