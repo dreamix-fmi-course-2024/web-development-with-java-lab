@@ -20,11 +20,11 @@ Implement 3 constructors:
 
 Implement setters and getters
 
-Implement string representation of the object -> Hello, I am <name>. I am <age> years old
+Implement string representation of the object -> Hello, I am < name >. I am < age > years old
 Tip: override -> toString.
 
 This implementation to have the following logic:
- - if the age is not set, then print Hello, I am <name>.
+ - if the age is not set, then print Hello, I am < name >.
  - if the the name is not set, then print I am John Doe
 
 ## Task 3
