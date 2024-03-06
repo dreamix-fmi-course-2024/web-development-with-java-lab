@@ -183,17 +183,6 @@ georgiminkov@Georgis-MacBook-Pro git-lab-01 % git log --all --decorate --oneline
 ```
 </details>
 
-```
-georgiminkov@Georgis-MacBook-Pro git-lab-01 % git log --all --decorate --oneline --graph
-* 7ab9044 (HEAD -> master) Update feature.txt on master for rebase conflict
-*   74e0483 (feature-branch-2) Resolve merge conflict between master and feature branch
-|\  
-| * 271e26a (feature-branch) Update from feature branch to greeting.txt
-* | 38dc12b Update from master branch
-|/  
-* cec5ff8 Initial commit for adding the first line of greeting.txt
-```
-
 9. Rebase feature-branch-2 over master
 <details>
 <summary>Steps</summary>
