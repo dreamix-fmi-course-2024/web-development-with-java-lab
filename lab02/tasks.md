@@ -1,6 +1,6 @@
 # Java tasks & Git
 
-Before you continue with todays training we advice you finish all tasks from lab01
+Before you continue with todays training we advice you finish all tasks from [lab01](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/blob/main/lab01/tasks.md#additional-tasks)
 
 # [Git] Task 0 Setup your GitHub account and prepare your repository
  - Create GitHub account
@@ -128,3 +128,12 @@ git log --all --decorate --oneline --graph
 ```
 
 </details>
+
+
+# Task 2 Setup GUI
+- IntelliJ
+- TortoiseGIT [download](https://tortoisegit.org/download/)
+- SourceTree [download](https://www.sourcetreeapp.com)
+- GitKraken [download](https://www.gitkraken.com)
+
+# Task 3
