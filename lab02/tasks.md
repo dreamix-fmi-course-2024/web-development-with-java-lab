@@ -129,6 +129,142 @@ git log --all --decorate --oneline --graph
 
 </details>
 
+7. You are taking a new feature task - feature-branch-2. Start by creating a branch
+<details>
+<summary>Steps</summary>
+
+
+## Reset your starting point
+```sh
+git checkout master
+```
+
+## Create a new feature branch
+```sh
+git checkout -b feature-branch-2
+```
+
+## Make changes in the new feature branch
+```sh
+echo "Another feature update" > feature.txt
+git add feature.txt
+git commit -m "Add feature in feature-branch-2"
+```
+</details>
+
+8. Create changes to the feature file inside master (create the file)
+<details>
+<summary>Steps</summary>
+
+
+## Switch to master
+```sh
+git checkout master
+```
+
+## Add text line to feature.txt
+```sh
+echo "Updates from master for conflict" > feature.txt
+git add feature.txt
+git commit -m "Update feature.txt on master for rebase conflict"
+```
+
+```
+georgiminkov@Georgis-MacBook-Pro git-lab-01 % git log --all --decorate --oneline --graph
+* c5d244a (HEAD -> master) Update feature.txt on master for rebase conflict
+| * 59ca35e (feature-branch-2) Add feature in feature-branch-2
+|/  
+*   74e0483 Resolve merge conflict between master and feature branch
+|\  
+| * 271e26a (feature-branch) Update from feature branch to greeting.txt
+* | 38dc12b Update from master branch
+|/  
+* cec5ff8 Initial commit for adding the first line of greeting.txt
+```
+</details>
+
+```
+georgiminkov@Georgis-MacBook-Pro git-lab-01 % git log --all --decorate --oneline --graph
+* 7ab9044 (HEAD -> master) Update feature.txt on master for rebase conflict
+*   74e0483 (feature-branch-2) Resolve merge conflict between master and feature branch
+|\  
+| * 271e26a (feature-branch) Update from feature branch to greeting.txt
+* | 38dc12b Update from master branch
+|/  
+* cec5ff8 Initial commit for adding the first line of greeting.txt
+```
+
+9. Rebase feature-branch-2 over master
+<details>
+<summary>Steps</summary>
+
+
+## Switch to feature-branch-2 to start the rebase
+```sh
+git checkout feature-branch-2
+```
+
+## Begin the rebase
+```sh
+git rebase master
+```
+```
+georgiminkov@Georgis-MacBook-Pro git-lab-01 % git rebase master
+CONFLICT (add/add): Merge conflict in feature.txt
+Auto-merging feature.txt
+error: could not apply 59ca35e... Add feature in feature-branch-2
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 59ca35e... Add feature in feature-branch-2
+```
+</details>
+
+10. Resolve conflicts
+<details>
+<summary>Steps</summary>
+
+
+## Switch to feature-branch-2 to start the rebase
+## Resolve the conflict in feature.txt manually
+```
+Git marked the file like this:
+<<<<<<< HEAD
+Another feature update
+=======
+Updates from master for conflict
+>>>>>>> master
+```
+
+## Combined updates from both master and feature-branch-2
+
+## After resolving the conflict, add the file to mark it as resolved
+```sh
+git add feature.txt
+```
+
+## Continue the rebase after resolving the conflict
+
+```sh
+git rebase --continue
+```
+
+## Add commit message and exit with :wq
+
+## Final tree
+```
+* b9cc4f8 (HEAD -> feature-branch-2) Add feature in feature-branch-2
+* c5d244a (master) Update feature.txt on master for rebase conflict
+*   74e0483 Resolve merge conflict between master and feature branch
+|\  
+| * 271e26a (feature-branch) Update from feature branch to greeting.txt
+* | 38dc12b Update from master branch
+|/  
+* cec5ff8 Initial commit for adding the first line of greeting.txt
+```
+</details>
+
 
 # Task 2 Setup GUI
 - IntelliJ
