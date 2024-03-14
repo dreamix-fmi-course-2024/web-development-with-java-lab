@@ -11,13 +11,14 @@ Client came to you with the desire to build an Event management system for Race 
   
 ### Team details
  - name (up to 60 characters, unique)
- - List<Racer>
+ - List< Racer >
 
 ### Event details
  - id
  - name
  - Track
- - List<Team>
+ - List< Team >
+ - Date of event
 
 ### Track details
  - id
@@ -27,11 +28,11 @@ Client came to you with the desire to build an Event management system for Race 
 ## Define your project structure
 
 ### Create entities
- 1. Create an entity package where all your elements will resides
- 2. Implement all your entity objects define by the details
+ 1. Create an entity package where all your elements will reside
+ 2. Implement all your entity objects defined by the details
     
-### Create repositoreis
- 1. Create a repository package where all your operation with the DB will be (make sure that the ID are auto-increment)
+### Create repositories
+ 1. Create a repository package where all your operations with the DB will be (make sure that the IDs are auto-increment)
  2. Implement default CRUD operations:
     1. RacerRepository
    ``` java
