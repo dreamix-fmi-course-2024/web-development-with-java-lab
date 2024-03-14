@@ -3,8 +3,10 @@ package repository;
 import model.Racer;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class RacerRepository {
     // structure to store your Racers
@@ -54,4 +56,7 @@ public class RacerRepository {
         return Optional.of(racerTable.get(id));
     }
 
+    public List<Racer> getAllRacers() {
+        return racerTable.values().stream().toList();
+    }
 }

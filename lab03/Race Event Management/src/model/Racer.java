@@ -6,6 +6,12 @@ public class Racer {
     private String lastName;
     private Integer age;
 
+    public Racer(String firstName, String lastName, Integer age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
     public Integer getId() {
         return id;
     }
