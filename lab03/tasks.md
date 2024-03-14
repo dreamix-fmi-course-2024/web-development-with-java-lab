@@ -1,6 +1,6 @@
-# Track Event System
+# Race Event Management System
 
-Client came to you with the desire to build an Event management system for Race Tracks. He needs to support multiple teams, tracks and racers.
+The client came to you wanting to build an Event management system for Race Tracks. He needs it to support multiple teams, tracks, and racers.
 
 
 ### Racer details
