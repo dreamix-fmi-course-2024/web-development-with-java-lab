@@ -206,7 +206,7 @@ public interface RacerService {
 
 ```
 
-For EventService expand with implementing the following interface
+For EventService expand the logic by implementing the following interface
 
 ```java
 /**
