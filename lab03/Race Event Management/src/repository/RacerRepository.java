@@ -23,6 +23,20 @@ public class RacerRepository {
         racerTable.put(racer.getId(), racer);
     }
 
+
+    /**
+     * Modify racer to your DB
+     * @param racer
+     */
+    public void updateRacer(Racer racer) {
+        if (racer.getId() == null) {
+            throw new IllegalArgumentException("Cannot update Racer without ID.");
+        }
+        racerTable.put(racer.getId(), racer);
+    }
+
+
+
     /**
      * Delete racer by id. If there is no element to be deleted then return false;
      * @param id
