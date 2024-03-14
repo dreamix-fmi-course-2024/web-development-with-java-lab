@@ -31,7 +31,7 @@ Client came to you with the desire to build an Event management system for Race 
  2. Implement all your entity objects define by the details
     
 ### Create repositoreis
- 1. Create a repository package where all your operation with the DB will be
+ 1. Create a repository package where all your operation with the DB will be (make sure that the ID are auto-increment)
  2. Implement default CRUD operations:
     1. RacerRepository
    ``` java
@@ -92,7 +92,7 @@ Client came to you with the desire to build an Event management system for Race 
         * @param name
         * @return Optional of Team
         */
-        public Optional<Team> getRacerById(String name) {
+        public Optional<Team> getTeamById(String name) {
         }
 
         /**
@@ -104,26 +104,136 @@ Client came to you with the desire to build an Event management system for Race 
     }
 
    ```
+3. EventRepository
+```java
+public class EventRepository {
+
+    private Map<Integer, Event> eventTable;
+
+    /**
+     * Add event to your DB
+     * @param event
+     */
+    public void addEvent(Event event) {
+        eventTable.put(event.getId(), event);
+    }
+
+    /**
+     * Delete event by id. If there is no element to be deleted then return false;
+     * @param id
+     * @return if there is element to delete -> true, if not -> false
+     */
+    public boolean deleteEventById(Integer id) {
+        return eventTable.remove(id) == null ? false : true;
+    }
+
+    /**
+     * Get event by passed id. If there is no element return Optional empty
+     * @param id
+     * @return Optional of Racer
+     */
+    public Optional<Event> getEventById(Integer id) {
+        return Optional.of(eventTable.get(id));
+    }
+
+    /**
+     * Get all events
+     * @return
+     */
+    public List<Event> getAllEvents() {
+        return eventTable.values().stream().collect(Collectors.toList());
+    }
+}
+
+```
+
+4. TrackRepository
+```java
+public class TrackRepository {
+
+    private Map<Integer, Track> trackMapTable = new HashMap<>();
+
+    /**
+     * Add track to your DB. If the track is already present throw Custom Exception
+     * @param track
+     */
+    public void addTrack(Track track) {
+    }
+
+    /**
+     * Delete track by name. If there is no element to be deleted then return false;
+     * @param name
+     * @return if there is element to delete -> true, if not -> false
+     */
+    public boolean deleteTrackByName(String name) {
+    }
+
+    /**
+     * Get track by passed id. If there is no element return Optional empty.
+     * @param id
+     * @return Optional of Track
+     */
+    public Optional<Track> getTrackById(Integer id) {
+    }
+
+    /**
+     * Get all tracks
+     * @return
+     */
+    public List<Track> getAllTracks() {
+    }
+}
+```
 
 ### Create services
 Create a service package where all your business logic will be
 
-1. RacerService
-   ```java
-   /**
-    * While implementing all functions you can introduce additional functionalities inside the repository class
-    */
-   public interface RacerService {
-        List<Racer> getAllRacers();
+Create separate services for operating over the main CRUD operations.
+e.g.
+```java
+/**
+ * While implementing all functions you can introduce additional functionalities inside the repository class
+ */
+public interface RacerService {
+    List<Racer> getAllRacers();
 
-        List<Racer> getAllRacersByFirstName(String firstName);
+    List<Racer> getAllRacersByFirstName(String firstName);
 
-        void createRacer(String firstName, String lastName, Integer age);
+    void createRacer(String firstName, String lastName, Integer age);
 
-        boolean deleteRacerByLastName(String lastName);
-    }
+    boolean deleteRacerById(Integer id);
+}
 
-   ```
-2. TeamService
-3. EventService
-4. TrackService
+```
+
+For EventService expand with implementing the following interface
+
+```java
+/**
+ * While implementing all functions you can introduce additional functionalities inside the repository class
+ */
+public interface EventService {
+    List<Event> getAllEvents();
+
+    List<Event> getAllRacersByTrackName(String trackName);
+
+    void createEvent();
+
+    boolean deleteEventById(Integer id);
+
+    List<Event> getAllEventsBefore(LocalDate date);
+
+    List<Event> getAllEventsAfter(LocalDate date);
+
+    List<Event> getUpcomingEvents();
+
+    /**
+     * Get all racers from the nearest event (timely manner)
+     * @return
+     */
+    List<Racer> getAllRacersForNearestEvent();
+
+    List<Event> getEventsForTrack(Track track);
+}
+
+```
