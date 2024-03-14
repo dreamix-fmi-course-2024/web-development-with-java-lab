@@ -1,4 +1,4 @@
-package model;
+package bg.fmi.javacourse2024.model;
 
 public class Racer {
     private Integer id;

@@ -1,12 +1,11 @@
-package repository;
+package bg.fmi.javacourse2024.repository;
 
-import model.Racer;
+import bg.fmi.javacourse2024.model.Racer;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class RacerRepository {
     // structure to store your Racers

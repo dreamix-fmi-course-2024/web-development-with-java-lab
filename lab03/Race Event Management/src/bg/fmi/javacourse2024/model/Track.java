@@ -1,4 +1,4 @@
-package model;
+package bg.fmi.javacourse2024.model;
 
 public class Track {
     private Integer id;

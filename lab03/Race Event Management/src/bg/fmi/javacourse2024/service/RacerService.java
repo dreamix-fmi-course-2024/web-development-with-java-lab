@@ -1,13 +1,13 @@
-package service;
+package bg.fmi.javacourse2024.service;
 
-import model.Racer;
-import repository.RacerRepository;
+import bg.fmi.javacourse2024.model.Racer;
+import bg.fmi.javacourse2024.repository.RacerRepository;
 
 import java.util.List;
 import java.util.Objects;
 
 /**
- * While implementing all functions you can introduce additional functionalities inside the repository class
+ * While implementing all functions you can introduce additional functionalities inside the bg.fmi.javacourse2024.repository class
  */
 public class RacerService {
     RacerRepository racerRepository = new RacerRepository(); // in the future will be injected by the Spring

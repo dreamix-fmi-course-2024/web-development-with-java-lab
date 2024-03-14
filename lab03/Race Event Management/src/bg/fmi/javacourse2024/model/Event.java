@@ -1,4 +1,4 @@
-package model;
+package bg.fmi.javacourse2024.model;
 
 import java.time.LocalDateTime;
 import java.util.List;
