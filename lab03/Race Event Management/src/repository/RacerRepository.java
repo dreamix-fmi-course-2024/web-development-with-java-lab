@@ -9,7 +9,6 @@ import java.util.Optional;
 public class RacerRepository {
     // structure to store your Racers
     private static Map<Integer, Racer> racerTable = new HashMap<>();
-    private static Integer sequence = 1000;
 
     /**
      * Add racer to your DB
@@ -19,7 +18,7 @@ public class RacerRepository {
         if (racer.getId() != null) {
             throw new IllegalArgumentException("Cannot create Racer with already given ID.");
         }
-        racer.setId(sequence++);
+        racer.setId(RaceSequence.getNextValue());
         racerTable.put(racer.getId(), racer);
     }
 
