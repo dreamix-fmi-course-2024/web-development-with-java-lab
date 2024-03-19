@@ -93,7 +93,7 @@ The client came to you wanting to build an Event management system for Race Trac
         * @param name
         * @return Optional of Team
         */
-        public Optional<Team> getTeamById(String name) {
+        public Optional<Team> getTeamById(Integer id) {
         }
 
         /**
