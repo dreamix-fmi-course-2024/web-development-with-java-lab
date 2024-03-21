@@ -75,5 +75,21 @@ public class RaceEventManagementApplication implements CommandLineRunner {
 }
 ```
 
-## Task 3 - finish all 
+## Task 3 - add lombok dependency
+1. Search for lombok inside [mvn-repository](https://mvnrepository.com/)
+2. Copy the `dependency`
+3. Add it inside `pom.xml`
+4. Create verion property instead of the hardcoded one (e.g 1.18.32)
+
+<details>
+<summary>Hints</summary>
+
+```md
+- [lombok-repo](https://mvnrepository.com/artifact/org.projectlombok/lombok)
+- modify `properties` in order to introduce `lombok.version`
+```
+
+</details>
+
+## Task 4 - finish all 
 Implement all Services connecting them to Repositories using the Spring approach
