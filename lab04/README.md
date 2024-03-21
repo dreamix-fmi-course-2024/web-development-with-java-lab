@@ -45,7 +45,7 @@ public class RaceEventManagementApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("Let's inspect the beans provided by Spring Boot:");
+        System.out.println("List of Beans provided by Spring Boot:");
 
         String[] beanNames = context.getBeanDefinitionNames();
         List<String> beanClasses = Stream.of(beanNames)
