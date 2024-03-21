@@ -21,6 +21,26 @@ It’s packed features like Dependency Injection, and out of the box modules lik
 
 - **Spring Test**: Offers testing support for Spring components. It simplifies the process of writing unit and integration tests by providing mock objects and testing frameworks integration.
 
+## Spring Bean
+
+A **Spring Bean** is an object that is instantiated, assembled, and otherwise managed by the Spring IoC (Inversion of Control) container. At its core, it's a component of your application that Spring is aware of and manages throughout its lifecycle. Here’s a quick breakdown:
+
+Additional information -> [spring-bean](https://www.baeldung.com/spring-bean)
+
+### Instantiation
+
+Spring creates instances of classes that are defined as beans. This creation process is typically configured in a Spring configuration file using XML or through annotations in the code.
+
+### Assembly
+
+Spring injects dependencies into the beans as needed. A dependency is another object that a bean requires to perform its tasks. For instance, a `UserService` bean might depend on a `UserRepository` bean to retrieve user information.
+
+### Management
+
+After beans are created and assembled, Spring takes care of their entire lifecycle. This includes instantiating bean objects, invoking initialization methods, and destroying them when necessary.
+
+Beans are defined in the Spring configuration file (XML) or via annotations. They can be accessed and manipulated through the Spring application context. Central to the Spring framework, beans enable the construction of an application in an interchangeable and reusable manner, forming the application's backbone.
+
 ## Spring Boot
 Spring Boot is basically an extension of the Spring framework, which eliminates the boilerplate configurations required for setting up a Spring application.
 
