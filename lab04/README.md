@@ -72,7 +72,4 @@ public class RaceEventManagementApplication implements CommandLineRunner {
 ```
 
 ## Task 3 - finish all 
-
-- migrate Race Event Management to Spring Boot approach
-- Use CommandLineRunner to execute custom logic inside your run funtionality
-- start the spring application from command line 
+Implement all Services connecting them to Repositories using the Spring approach
