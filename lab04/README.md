@@ -3,7 +3,9 @@
 ## Task 1 - migrate your Race Event Management tool to a Spring Boot application
 1. To achieve this task you will need to create a Spring Boot application with IntelliJ Ultimate or [spring-initializr](https://start.spring.io/) to create a Spring Boot application.
 
-`If you are having trouble with the starter you can check the following [documentation](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/tree/main/lab04/spring-initializr-tutorial.md))`
+```
+If you are having trouble with the starter you can check the following [documentation](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/tree/main/lab04/spring-initializr-tutorial.md))
+```
 
 2. Create the proper Bean definition and connect all project dependencies
 <details>
