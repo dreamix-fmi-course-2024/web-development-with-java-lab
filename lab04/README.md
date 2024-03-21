@@ -31,7 +31,23 @@ For this test we will use the RacerService (as it's funtionalities are simple to
 
 In your main class implement the `CommandLineRunner` interface. This will give you the abbility to play with your Spring Boot application
 
-Create new Racers and then print them out.
+1. Create new Racers and then print them out.
+```java
+    @Override
+    public void run(String... args) throws Exception {
+        racerService.createRacer("Test", "Test", 18);
+        racerService.createRacer("Test1", "Test1", 18);
+        racerService.createRacer("Test2", "Test2", 18);
+
+        racerService.getAllRacers().stream().forEach(el -> System.out.println(el));
+    }
+
+```
+
+2. Use ApplicationContext to print all loaded beans
+
+<details>
+<summary>Hints</summary>
 
 ```java
 @SpringBootApplication
@@ -74,6 +90,9 @@ public class RaceEventManagementApplication implements CommandLineRunner {
     }
 }
 ```
+
+</details>
+
 
 ## Task 3 - add lombok dependency
 1. Search for lombok inside [mvn-repository](https://mvnrepository.com/)
