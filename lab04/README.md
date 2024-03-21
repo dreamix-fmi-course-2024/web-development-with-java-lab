@@ -11,10 +11,12 @@ If you are having trouble with the starter you can check the following [document
 2. Create the proper Bean definition and connect all project dependencies
 <details>
 <summary>Hints</summary>
-```
+
+```md
 - make use of @Autowired and @Component annotation
 - Connect the respectful classes (e.g Service is containing Repository, Service can contain one or more Services)
 ```
+
 </details>
 
 If you don't have the code for the RaceEventManagement project you can use the code from [lab03](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/tree/main/lab03/Race%20Event%20Management/src/bg/fmi/javacourse2024).
