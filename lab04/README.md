@@ -7,6 +7,10 @@
 If you are having trouble with the starter you can check the following [documentation](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/tree/main/lab04/spring-initializr-tutorial.md)
 </pre></big>
 
+<big><pre>
+In case you need additional information about Spring/Spring Boot/Maven, use the following [documentation](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/tree/main/lab04/basic-guide.md)
+</pre></big>
+
 
 2. Create the proper Bean definition and connect all project dependencies
 <details>
