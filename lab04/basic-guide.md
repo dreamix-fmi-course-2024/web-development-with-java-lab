@@ -26,6 +26,21 @@ Spring Boot is basically an extension of the Spring framework, which eliminates 
 
 *It takes an opinionated view of the Spring platform, which paves the way for a faster and more efficient development ecosystem.*
 
+Features
+- Create stand-alone Spring applications
+- Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)
+- Provide opinionated 'starter' dependencies to simplify your build configuration
+- Automatically configure Spring and 3rd party libraries whenever possible
+- Provide production-ready features such as metrics, health checks, and externalized configuration
+- Absolutely no code generation and no requirement for XML configuration
+
+Spring Boot provides a number of starter dependencies for different Spring modules. Some of the most commonly used ones are:
+
+- spring-boot-starter-data-jpa
+- spring-boot-starter-security
+- spring-boot-starter-test
+- spring-boot-starter-web
+  
 ## Maven Explained
 
 Apache Maven is a comprehensive project management tool used primarily for Java projects. It automates the process of building and managing projects, adhering to the principle of convention over configuration. Maven simplifies tasks such as compiling code, packaging binaries, and managing dependencies through the use of a Project Object Model (POM) file, typically named `pom.xml`.
