@@ -1,0 +1,123 @@
+# Basic Guide to Spring/Spring Boot/Maven
+
+## Spring and Spring Boot
+
+Full read: [baeldung-resource](https://www.baeldung.com/spring-vs-spring-boot)
+
+### Spring
+The Spring framework provides comprehensive infrastructure support for developing Java applications.
+
+It’s packed features like Dependency Injection, and out of the box modules like:
+
+- **Spring JDBC**: Simplifies database access and error handling. It provides a template pattern approach to interact with a database, reducing the need for boilerplate code.
+
+- **Spring MVC**: A framework for building web applications in Java. It follows the Model-View-Controller design pattern and offers features for developing web pages, RESTful web services, and more.
+
+- **Spring Security**: Provides comprehensive security services for Java applications. It offers a wide range of authentication and authorization features to secure applications.
+
+- **Spring AOP** (Aspect-Oriented Programming): Allows the separation of cross-cutting concerns (such as logging, transaction management) from the business logic, making the code cleaner and more maintainable.
+
+- **Spring ORM** (Object-Relational Mapping): Integrates with ORM frameworks like Hibernate, JPA, and JDO. It simplifies the data access process while working with databases in object-oriented programming languages.
+
+- **Spring Test**: Offers testing support for Spring components. It simplifies the process of writing unit and integration tests by providing mock objects and testing frameworks integration.
+
+## Spring Boot
+Spring Boot is basically an extension of the Spring framework, which eliminates the boilerplate configurations required for setting up a Spring application.
+
+*It takes an opinionated view of the Spring platform, which paves the way for a faster and more efficient development ecosystem.*
+
+## Maven Explained
+
+Apache Maven is a comprehensive project management tool used primarily for Java projects. It automates the process of building and managing projects, adhering to the principle of convention over configuration. Maven simplifies tasks such as compiling code, packaging binaries, and managing dependencies through the use of a Project Object Model (POM) file, typically named `pom.xml`.
+
+### Build Lifecycle
+
+Maven organizes the build process into a series of phases known as a build lifecycle. Key lifecycles include:
+
+- `validate` - validate the project is correct and all necessary information is available
+- `compile` - compile the source code of the project
+- `test` - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+- `package` - take the compiled code and package it in its distributable format, such as a JAR.
+- `verify` - run any checks on results of integration tests to ensure quality criteria are met
+- `install` - install the package into the local repository, for use as a dependency in other projects locally
+- `deploy` - done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.
+
+Each lifecycle is made up of phases, for example, the default lifecycle includes `compile`, `test`, `package`, and more.
+
+### Goals
+
+Goals are specific tasks within a build phase, such as compiling code or creating a JAR file. Executing a Maven phase triggers all goals associated with that phase.
+
+### Project Object Model (POM)
+
+The `pom.xml` file is at the heart of a project's Maven configuration. It contains project information and configuration details for Maven to build the project. Essential elements of a POM file include dependencies, repositories, plugins, and profiles.
+
+#### Dependencies
+
+Dependencies are external Java libraries required by the project. Each dependency is identified by its `groupId`, `artifactId`, and `version`.
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>com.example</groupId>
+        <artifactId>example-library</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+</dependencies>
+```
+
+#### Repositories
+
+Repositories are sources from which Maven can download dependencies. If a dependency is not present in the local repository, Maven will attempt to download it from a configured remote repository.
+
+```xml
+<repositories>
+    <repository>
+        <id>example-repo</id>
+        <url>http://example.com/maven2</url>
+    </repository>
+</repositories>
+```
+
+#### Dependency Scopes
+
+Dependency scopes define the classpath visibility and lifecycle of a dependency:
+
+- **compile**: Default scope, available on all classpaths.
+- **provided**: Expected to be provided by the JDK or a container at runtime.
+- **runtime**: Required for execution but not for compilation.
+- **test**: Only available for the test compilation and execution.
+- **system**: Similar to provided but the JAR must be explicitly provided.
+- **import**: Used in a dependency of type `pom` to import dependency management information.
+
+#### Versioning
+
+Maven supports several strategies for specifying dependency versions:
+
+- **Fixed Version**: Specifies an exact version.
+- **Version Ranges**: Allows the use of a range of versions.
+- **Snapshot Versions**: Development versions that can be updated with newer snapshots.
+
+### Profiles
+
+Profiles enable customization of the build for different environments or configurations. They can override settings, dependencies, and plugins for specific scenarios.
+
+```xml
+<profiles>
+    <profile>
+        <id>development</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <dependencies>
+            <!-- Development-specific dependencies here -->
+        </dependencies>
+    </profile>
+    <profile>
+        <id>production</id>
+        <!-- Production-specific settings here -->
+    </profile>
+</profiles>
+```
+
+Maven's structure and its `pom.xml` configuration file provide a robust and flexible framework for managing project builds, dependencies, and documentation across different environments and stages of development.
