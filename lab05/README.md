@@ -110,6 +110,7 @@ Tips: you can use @Value or AppConfig class from lecture example.
 
 <details>
 <summary>If Trello is not loading open here</summary>
+
 **User Story**: Event Deletion Safety Check
 Title: Implement a Safety Check for Event Deletion Based on Configurable Time Window
 
