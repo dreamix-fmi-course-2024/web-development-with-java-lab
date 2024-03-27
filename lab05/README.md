@@ -124,7 +124,7 @@ Title: Implement a Safety Check for Event Deletion Based on Configurable Time Wi
 
 **Logging**: Every attempt to delete an event, whether successful or blocked by the safety check, should be logged with appropriate details (e.g., event ID, scheduled date, deletion attempt timestamp, and the outcome of the attempt).
 
-<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;8h9ogkId">Implement a Safety Check for Event Deletion Based on Configurable Time Window</a></blockquote><script src="https://p.trellocdn.com/embed.min.js"></script>
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;8h9ogkId">Implement a Safety Check for Event Deletion Based on Configurable Time Window</a></blockquote>
 
 ## Bonus Task (REST API {lec06})
 For your management platform create a simple get all racers REST endpoint
