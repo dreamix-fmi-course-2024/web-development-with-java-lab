@@ -115,6 +115,7 @@ Title: Implement a Safety Check for Event Deletion Based on Configurable Time Wi
 **So that** I can ensure there is adequate notice for participants and stakeholders before any event is canceled or removed from the system.
 
 *Acceptance Criteria*:
+
 **Configurable Safety Window**: The number of days constituting the safety window should be configurable via an application property named events.deletion-safety-window-days. This property should default to 30 days but can be adjusted as needed for different environments or operational policies.
 
 **Deletion Check**: When an attempt is made to delete an event, the system must first check if the event's scheduled date is outside the configured safety window (i.e., the event date is further in the future than the safety window allows).
