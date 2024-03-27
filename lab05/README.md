@@ -104,7 +104,7 @@ Tips: you can use @Value or AppConfig class from lecture example.
 [similar class implementation](https://github.com/GeorgiMinkov/smart-garden/blob/master/ms-smart-garden/src/main/java/bg/unisofia/fmi/robotcourse/config/AppConfig.java) and
 [property file](https://github.com/GeorgiMinkov/smart-garden/blob/master/ms-smart-garden/src/main/resources/application.properties)
 
-## Task 3 - User story for deletion information
+## Task 3 - User story for deletion information - TRELLO STORY #12
 
 <blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;8h9ogkId">Implement a Safety Check for Event Deletion Based on Configurable Time Window</a></blockquote>
 
