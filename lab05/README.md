@@ -104,7 +104,12 @@ Tips: you can use @Value or AppConfig class from lecture example.
 [similar class implementation](https://github.com/GeorgiMinkov/smart-garden/blob/master/ms-smart-garden/src/main/java/bg/unisofia/fmi/robotcourse/config/AppConfig.java) and
 [property file](https://github.com/GeorgiMinkov/smart-garden/blob/master/ms-smart-garden/src/main/resources/application.properties)
 
-## Task 4 - User story for deletion information
+## Task 3 - User story for deletion information
+
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;8h9ogkId">Implement a Safety Check for Event Deletion Based on Configurable Time Window</a></blockquote>
+
+<details>
+<summary>If Trello is not loading open here</summary>
 **User Story**: Event Deletion Safety Check
 Title: Implement a Safety Check for Event Deletion Based on Configurable Time Window
 
@@ -123,8 +128,7 @@ Title: Implement a Safety Check for Event Deletion Based on Configurable Time Wi
 **Prevention of Deletion**: If the event is within the safety window (e.g., scheduled to occur within the next 30 days by default), the system must prevent the deletion and return a meaningful error message indicating that the event cannot be deleted due to its proximity to the current date.
 
 **Logging**: Every attempt to delete an event, whether successful or blocked by the safety check, should be logged with appropriate details (e.g., event ID, scheduled date, deletion attempt timestamp, and the outcome of the attempt).
-
-<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;8h9ogkId">Implement a Safety Check for Event Deletion Based on Configurable Time Window</a></blockquote>
+</details>
 
 ## Bonus Task (REST API {lec06})
 For your management platform create a simple get all racers REST endpoint
