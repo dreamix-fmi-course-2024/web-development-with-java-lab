@@ -1,6 +1,6 @@
 # Tasks
 
-Before continuing, ensure thath you have at least one full domain thread (model -> service -> repository) from the last week tasks
+Before continuing, ensure that you have at least one full domain thread (model -> service -> repository) from the last week tasks
 
 
 ## Task 0
