@@ -63,7 +63,6 @@ public enum LoggerLevel {
  }
 ```
 
-
 Based on the logging level defined inside the application.propeties limit the information that you log inside your application.
 
 Logging parameters: INFO, DEBUG, TRACE
@@ -83,9 +82,9 @@ dev profile to use the FILE implementation
 ```
 
 ## Task 1
-Use your custom logger inside RaveEventManagement.
+Use your custom logger inside RaceEventManagement.
 
-Example. log data when you enter creation method -> logger.info("createEvent triggered");
+*Example*: log data when you enter creation method -> logger.info("createEvent triggered");
 
 
 ## Task 2
