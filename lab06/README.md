@@ -20,7 +20,7 @@ How to setup a request
    ![](https://github.com/GeorgiMinkov/web-development-with-Java/blob/main/week06/images/result.png)
 
 # Task 01 - Defining controllers in the REM system
-In the next task we will use our ongoing Race Event Management system. (you can use implementation from this [repo](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/tree/main/lab05/RaceEventManagement) {pay attantion: not all services are implemented})
+In the next task we will use our ongoing Race Event Management system. (you can use implementation from this [repo](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/tree/main/lab05/RaceEventManagement) {pay attention: not all services are implemented})
 
 ***NB:*** *DTO* pattern and *Mappers* will be discussed in depth inside the next lecture
 
