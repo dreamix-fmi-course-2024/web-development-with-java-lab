@@ -1,4 +1,5 @@
-# For today's lab we will create and connect to our own DB instance. You will create a simple tables with appropriate entities, repositories. Then we will call them via REST API.
+# Spring Boot + DB
+For today's lab we will create and connect to our own DB instance. You will create a simple tables with appropriate entities, repositories. Then we will call them via REST API.
 
 # Task 0
 Setup a PostgreSQL DB on your machine. If you have problem you can use the following [guide](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/blob/main/lab08/postgresql.md)
