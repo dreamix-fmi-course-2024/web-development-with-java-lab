@@ -126,6 +126,6 @@ CREATE TABLE event_team (
 
 <details>
 <summary>SQL Schema</summary>
-![image](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/blob/main/lab08/db-diagram.png)
+![image](db-diagram.png)
 </details>
 
