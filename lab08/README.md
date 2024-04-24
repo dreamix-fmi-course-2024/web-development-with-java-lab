@@ -124,6 +124,6 @@ CREATE TABLE event_team (
 </details>
 
 DB Diagram
-![](https://github.com/dreamix-fmi-course-2024/web-development-with-java-lab/blob/main/lab08/db-diagram.png)
+![](images/db-diagram.png)
 
 
