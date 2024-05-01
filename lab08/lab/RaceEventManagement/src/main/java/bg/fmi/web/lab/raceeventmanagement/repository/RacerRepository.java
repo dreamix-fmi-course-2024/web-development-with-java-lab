@@ -11,9 +11,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-//@Component
-//@Component("customName")
-//@Repository("customName")
 @Repository
 public interface RacerRepository extends JpaRepository<Racer, Integer> {
 

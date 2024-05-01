@@ -27,4 +27,16 @@ public class RacerService {
     public Racer createRacer(Racer racer) {
        return  racerRepository.save(racer);
     }
+
+    public Racer findById(Integer id) {
+        return racerRepository.findById(id).orElse(null);
+    }
+
+    public Racer updateRacer(Racer racer) {
+        return  racerRepository.save(racer);
+    }
+
+    public void removeRacer(Integer id) {
+        racerRepository.deleteById(id);
+    }
 }
