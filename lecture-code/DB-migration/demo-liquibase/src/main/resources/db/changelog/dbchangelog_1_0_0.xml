@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<databaseChangeLog  
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"  
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">  
+	<changeSet id="0" author="Minkov">
+   		<tagDatabase tag="1.0"/>
+   	</changeSet>
+    <changeSet  id="1"  author="Minkov"> 
+        <createTable  tableName="USER">  
+            <column  name="id"  type="int">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column  name="USERNAME"  type="varchar(256)">  
+                <constraints  nullable="false"/>  
+            </column>  
+		<column  name="active"  type="boolean"                       
+			defaultValueBoolean="true"/>  
+        </createTable>
+        <rollback>
+        	<dropTable tableName="USER"/>
+        	<delete tableName="DATABASECHANGELOG">ID='1.0'</delete>
+        </rollback>
+   </changeSet>
+   
+</databaseChangeLog>

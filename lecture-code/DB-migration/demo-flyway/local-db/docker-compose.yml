@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+
+  # PostgreSQL database service
+  db-app:
+    image: postgres:15.3
+    restart: unless-stopped
+    ports:
+      - '15432:5432'  # Expose port 5432 on the host for PostgreSQL
+    environment:
+      - POSTGRES_USER=postgres  # Set the username for the PostgreSQL database
+      - POSTGRES_PASSWORD=postgres  # Set the password for the PostgreSQL database
+      - POSTGRES_DB=fmi # Set the DB for the PostgreSQL database
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql  # Mount a directory for storing PostgreSQL data
+
+  db-flyway-cli:
+    image: postgres:15.3
+    restart: unless-stopped
+    ports:
+      - '25432:5432'  # Expose port 5432 on the host for PostgreSQL
+    environment:
+      - POSTGRES_USER=flyway_cli  # Set the username for the PostgreSQL database
+      - POSTGRES_PASSWORD=flyway_cli  # Set the password for the PostgreSQL database
+      - POSTGRES_DB=fmi # Set the DB for the PostgreSQL database
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql  # Mount a directory for storing PostgreSQL data
+
+  db-mvn-plugin:
+    image: postgres:15.3
+    restart: unless-stopped
+    ports:
+      - '35432:5432'  # Expose port 5432 on the host for PostgreSQL
+    environment:
+      - POSTGRES_USER=mvn_plugin  # Set the username for the PostgreSQL database
+      - POSTGRES_PASSWORD=mvn_plugin  # Set the password for the PostgreSQL database
+      - POSTGRES_DB=fmi # Set the DB for the PostgreSQL database
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql  # Mount a directory for storing PostgreSQL data
+
+  db-liquibase-cli:
+    image: postgres:15.3
+    restart: unless-stopped
+    ports:
+      - '45432:5432'  # Expose port 5432 on the host for PostgreSQL
+    environment:
+      - POSTGRES_USER=liquibase_cli  # Set the username for the PostgreSQL database
+      - POSTGRES_PASSWORD=liquibase_cli  # Set the password for the PostgreSQL database
+      - POSTGRES_DB=fmi # Set the DB for the PostgreSQL database
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql  # Mount a directory for storing PostgreSQL data
