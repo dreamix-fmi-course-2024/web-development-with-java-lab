@@ -24,3 +24,4 @@ When the user clicks on "Show All Racers" we should open RacerList.
 ## Useful Links
  - Add HttpModule - https://angular.dev/guide/http/setup
  - Add Angular Material - https://material.angular.io/guide/getting-started
+ - Add Router - https://angular.dev/guide/routing/common-router-tasks
