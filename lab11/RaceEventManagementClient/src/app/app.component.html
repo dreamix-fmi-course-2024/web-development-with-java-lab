@@ -1,2 +1,8 @@
 
-<button mat-flat-button color="primary" >CLICK mee</button>
+<button mat-flat-button color="primary" (click)="findAllRacers()" >CLICK mee</button>
+<button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<app-racer-new></app-racer-new>
+<app-racer-details *ngFor="let racer of racers" [racer]="racer"></app-racer-details>
+

@@ -1,0 +1,15 @@
+<form class="form-container" [formGroup]="racerForm">
+    <mat-form-field>
+        <mat-label>First name</mat-label>
+        <input matInput  formControlName="name">
+    </mat-form-field>
+    <mat-form-field >
+        <mat-label>Last name</mat-label>
+        <input matInput formControlName="lastName">
+    </mat-form-field>
+    <mat-form-field >
+        <mat-label>Age</mat-label>
+        <input matInput formControlName="age">
+    </mat-form-field>
+    <button mat-flat-button color="accent" (click)="createRacer()">Create</button>
+</form>
