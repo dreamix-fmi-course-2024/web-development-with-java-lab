@@ -1,9 +1,6 @@
 package bg.fmi.web.lab.raceeventmanagement.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -12,9 +9,10 @@ public class Racer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String firstName;
-    private String lastName;
-    private Integer age;
+for
+    @ManyToOne
+    @JoinColumn(name = "team_id")
+    private Team team;
 
     public Racer() {
     }

@@ -10,16 +10,8 @@ import org.mapstruct.Named;
 @Mapper(componentModel = "spring")
 public interface RacerMapper {
     @Mapping(source = "name", target = "firstName")
-    @Mapping(target = "lastName", source = "lastName", ignore = true)
-//    @Mapping(source = , target = , qualifiedByName = "imenametod")
     Racer mapFromDto(RacerDto racerDto);
-//
-//    @Named("imenametod")
-//    default ? methodName() {
-//        return ?;
-//    }
-//
-//    Team mapFromTeamDTO(TeamDTO teamDto);
-//
-//    List<Team> mapFromTeamDtos()
+
+    @Mapping(source = "firstName", target = "name")
+    RacerDto mapToDto(Racer racer);
 }

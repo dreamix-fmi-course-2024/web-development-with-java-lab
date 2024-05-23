@@ -81,7 +81,7 @@ public class DummyController {
 
         System.out.println(eventService.getAllEventsBefore(LocalDateTime.of(2023, 12, 1, 1, 1)));
 
-        System.out.println(eventService.getAllRacersForNearestEvent());
+//        System.out.println(eventService.getAllRacersForNearestEvent());
     }
 
 //    @GetMapping("/something")

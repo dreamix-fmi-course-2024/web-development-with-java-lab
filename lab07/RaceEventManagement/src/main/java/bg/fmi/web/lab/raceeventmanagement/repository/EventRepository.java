@@ -22,9 +22,9 @@ public class EventRepository {
         if (event.getId() != null) {
             throw new IllegalArgumentException("Cannot create Event with already given ID.");
         }
-        event.setId(EventSequence.getNextValue());
-
-        eventTable.put(event.getId(), event);
+//        event.setId(EventSequence.getNextValue());
+//
+//        eventTable.put(event.getId(), event);
     }
 
     /**

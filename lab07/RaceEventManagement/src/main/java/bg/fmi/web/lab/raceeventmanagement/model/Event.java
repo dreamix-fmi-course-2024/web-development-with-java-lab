@@ -1,27 +1,39 @@
 package bg.fmi.web.lab.raceeventmanagement.model;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 import java.util.List;
-
+@Entity
 public class Event {
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
-    private Track track;
-    private List<Team> teams;
+
     private LocalDateTime dateOfEvent;
+
+//    @ManyToMany(mappedBy = "events")
+    @ManyToMany
+    @JoinTable(
+            name = "event_team",
+            joinColumns = @JoinColumn(name = "event_id"),
+            inverseJoinColumns = @JoinColumn(name = "team_id")
+    )
+    private List<Team> teams;
 
     public Event(String name, Track track, List<Team> teams, LocalDateTime dateOfEvent) {
         this.name = name;
-        this.track = track;
-        this.teams = teams;
+
         this.dateOfEvent = dateOfEvent;
     }
+    public Event() {}
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -33,13 +45,6 @@ public class Event {
         this.name = name;
     }
 
-    public Track getTrack() {
-        return track;
-    }
-
-    public void setTrack(Track track) {
-        this.track = track;
-    }
 
     public List<Team> getTeams() {
         return teams;
@@ -62,7 +67,6 @@ public class Event {
         return "Event{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", track=" + track +
                 ", teams=" + teams +
                 ", dateOfEvent=" + dateOfEvent +
                 '}';
